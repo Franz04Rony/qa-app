@@ -10,12 +10,11 @@ function App() {
   const [nickname, setNickname] = useState("")
   const [login, setLogin] = useState(false)
 
-  let preguntas = []
-
   useEffect(()=>{
     main(text, setText)
   }, [])
-  preguntas = text.split("\r\n")
+  
+  const preguntas = text.split("\r\n")
 
   const handleLogin = () => {
     setLogin(v => !v)
@@ -82,7 +81,7 @@ function App() {
             <form className="preguntas mt-5" onSubmit={handleSubmit}>
               {preguntas.map((e, i)=>{
                 return (
-                  <div key={i}>
+                  <div key={e}>
                     <div>
                       {e}
                     </div>
