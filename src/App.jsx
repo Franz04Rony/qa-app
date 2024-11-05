@@ -14,7 +14,7 @@ function App() {
     main(text, setText)
   }, [])
   
-  const preguntas = text.split("\r\n")
+  const preguntas = text.split("\n")
 
   const handleLogin = () => {
     setLogin(v => !v)
